@@ -1,0 +1,23 @@
+<%- include('partials/header'); -%>
+<h1>Update Student</h1>
+
+<form action="/update/<%= student.id %>" method="POST">
+  <div class="form-group">
+    <label for="rollno">Roll No</label>
+    <input type="text" class="form-control" id="rollno" name="rollno" value="<%= student.rollno %>">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" value="<%= student.name %>">
+  </div>
+  <div class="form-group">
+    <label for="branch">Branch</label>
+    <input type="text" class="form-control" id="branch" name="branch" value="<%= student.branch %>">
+  </div>
+  <div class="form-group">
+    <label for="userID">User Id</label>
+    <input type="text" class="form-control" id="userID" name="userID" value="<%= student.userID %>">
+  </div>
+  <button type="submit" class="btn btn-primary" style="margin-top: 20px">Update</button>
+
+<%- include('partials/footer'); -%>

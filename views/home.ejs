@@ -1,0 +1,143 @@
+<%- include('partials/header'); -%>
+
+<button type="button" class="btn btn-primary btn-space" data-toggle="modal" data-target="#myModal" style="margin-top:20px" id="myButton">
+  Add Student
+</button>
+
+<div class="input-group mb-3">
+  <input id="myInputName" onkeyup="myFunctionName()" type="text" style="margin-top: 20px" class="form-control" placeholder="Search by Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input id="myInputRoll" onkeyup="myFunctionRoll()" type="text" style="margin-top: 20px" class="form-control" placeholder="Search by Roll" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input id="myInputBranch" onkeyup="myFunctionBranch()" type="text" style="margin-top: 20px" class="form-control" placeholder="Search by Branch" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input id="myInputUserID" onkeyup="myFunctionUserID()" type="text" style="margin-top: 20px" class="form-control" placeholder="Search by User ID" aria-label="Recipient's username" aria-describedby="basic-addon2">
+
+  <!-- <div class="input-group-append">
+    <span class="input-group-text" style="margin-top: 20px" id="basic-addon2">Search</span>
+  </div> -->
+  
+</div>
+
+
+
+<table class="table table-striped" id="student-table">
+  <thead>
+    <tr>
+      <th scope="col">Roll No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Branch</th>
+      <th scope="col">User Id</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(var i = 0; i < students.length; i++){ %>
+      <tr>
+        <td><%= students[i].rollno %></td>
+        <td><%= students[i].name %></td>
+        <td><%= students[i].branch %></td>
+        <td><%= students[i].userID %></td>
+        <td>
+          <a href="/update/<%= students[i].id %>" class="btn btn-primary">Update</a>
+          <a href="/delete/<%= students[i].id %>" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+
+</table>
+
+<script>
+  function myFunctionName() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInputName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("student-table");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  function myFunctionRoll() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInputRoll");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("student-table");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  function myFunctionBranch() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInputBranch");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("student-table");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[2];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  function myFunctionUserID() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInputUserID");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("student-table");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[3];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+
+</script>
+
+<script type="text/javascript">
+  document.getElementById("myButton").onclick = function () {
+      location.href = "add";
+  };
+</script>
+  
+<%- include('partials/footer'); -%>
