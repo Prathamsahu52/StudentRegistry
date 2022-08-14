@@ -12,7 +12,7 @@ The app is run on a node server, thus it can be run on local machine by running 
 node app.js
 ```
 
-Make sure you have MongoDB installed in the system for this application to work. The instructions to install can be viewed [here](https://www.mongodb.com/docs/manual/installation/)
+Make sure you have **MongoDB installed** in the system for this application to work. The instructions to install can be viewed [here](https://www.mongodb.com/docs/manual/installation/)
 
 ## Code Summary
 
