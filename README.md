@@ -14,6 +14,12 @@ node app.js
 
 Make sure you have **MongoDB installed** in the system for this application to work. The instructions to install can be viewed [here](https://www.mongodb.com/docs/manual/installation/)
 
+The Application will now be available and ready to use at the following url
+
+```
+http://localhost:3000/
+```
+
 ## Code Summary
 
 The Web Application is the implementation of **CRUD operations** and has been built on the **mongoDB database** using the **mongoose, nodeJS and ExpressJS frameworks**.
