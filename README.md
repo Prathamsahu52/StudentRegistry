@@ -11,3 +11,6 @@ The app is run on a node server, thus it can be run on local machine by running 
 ```
 node app.js
 ```
+##Code
+
+The Web Application is the implementation of CRUD operations and has been built on the mongoDB database using the mongoose framework and nodeJS and its framework ExpressJS are used in implementing the back end
