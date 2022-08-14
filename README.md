@@ -16,7 +16,7 @@ Make sure you have **MongoDB installed** in the system for this application to w
 
 ## Code Summary
 
-The Web Application is the implementation of **CRUD operations** and has been built on the **mongoDB database** using the **mongoose, nodeJS and ExpressJS frameworks*.
+The Web Application is the implementation of **CRUD operations** and has been built on the **mongoDB database** using the **mongoose, nodeJS and ExpressJS frameworks**.
 
 **EJS** is used for templating and 'POST' and 'GET' requests are used by the server to interact with the browser.
 
