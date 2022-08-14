@@ -24,7 +24,7 @@ The CRUD operations are implemented and the **frontend** is simplistic and writt
 
 ## How to use the Application
 
--The application has an **ADD** feature that can be used to add new students to the register. This can be accessed by clicking the button on the top of the page or on the Navbar
+-The application has an **Add** feature that can be used to add new students to the register. This can be accessed by clicking the button on the top of the page or on the Navbar
 
 -The application has **Search and Filtering** feature with interactive filtering. The Student entries can be filtered on basis of Name, RollNo, UserID and Branch.
 
